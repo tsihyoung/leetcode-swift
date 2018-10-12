@@ -24,7 +24,7 @@ public func monotone(_ points: [[Int]]) -> [[Int]] {
         upper.append(point)
     }
     
-    for point in points.lazy.reversed() {
+    for point in points.reversed() {
         while (lower.count >= 2) {
             if (cross_prod(lower[lower.count-2],lower[lower.count-1],point) < 0) {
                 break
